@@ -25,6 +25,8 @@ Route::post('/criar_produto', [ProdutoController::class, 'criar']);
 
 Route::get('/listar_produtos', [ProdutoController::class, 'listar']);
 
+Route::delete("/deletar_produto/{id}", [ProdutoController::class, 'deletar']);
+
 // App
 Route::get('/', [AppController::class, 'inicial']);
 
@@ -33,3 +35,5 @@ Route::get('/', [AppController::class, 'inicial']);
 Route::get('/cadastro_pedido', [PedidoController::class, 'formCadastrarPedido']);
 
 Route::post('/cadastrar_pedido', [PedidoController::class, 'cadastrar']);
+
+Route::get('/listar_pedidos', [PedidoController::class, 'listar']);

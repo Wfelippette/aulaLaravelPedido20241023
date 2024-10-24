@@ -22,6 +22,7 @@ class PedidoController extends Controller
 
         // {"id":1,"name":"Rafael da silva","cpf":"33333","email":"email@email.com","created_at":"2024-10-21T10:25:11.000000Z","updated_at":"2024-10-21T10:25:11.000000Z"}
         // [{"id":1,"nome":"batata","descricao":"batata","preco":10,"created_at":"2024-10-21T10:25:26.000000Z","updated_at":"2024-10-21T10:25:26.000000Z","pivot":{"pedido_id":1,"produto_id":1,"quantidade":2,"created_at":"2024-10-21T10:25:34.000000Z"}}]
+        return view("pedidos", ["pedidos"=>$pedidos]);
     }
 
     public function cadastrar(Request $request)
@@ -41,6 +42,6 @@ class PedidoController extends Controller
           }
       }
 
-      return redirect('/listar_usuarios');
+      return redirect('/listar_pedidos');
    }
 }

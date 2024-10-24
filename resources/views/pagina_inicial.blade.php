@@ -8,6 +8,6 @@
 </head>
 <body>
   <a href="/cadastro_usuario">Cadastro usuário</a>
-  <a href="/listar_produtos">Listar usuário</a>
+  <a href="/listar_usuario">Listar usuário</a>
 </body>
 </html>

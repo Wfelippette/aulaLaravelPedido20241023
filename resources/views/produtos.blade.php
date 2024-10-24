@@ -12,9 +12,9 @@
   @else
   <table border="1">
     <tr>
-      <th>Nome</th>
-      <th>Descrição</th>
-      <th>Preço</th>
+        <td>{{$produto->nome}}</td>
+        <td>{{$produto->descricao}}</td>
+        <td>{{$produto->preco}}</td>
     </tr>
     @foreach ($produtos as $produto)
         <tr>
@@ -22,7 +22,7 @@
           <td>{{$produto->descricao}}</td>
           <td>{{$produto->preco}}</td>
           <td>
-            <form method="POST" action="/deletar_produto/{{$produto->nome}}">
+            <form method="POST" action="/deletar_produto/{{$produto->id}}">
               @csrf
               {{ method_field("DELETE") }}
               <input type="submit" value="delete produto">
